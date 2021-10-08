@@ -1,0 +1,86 @@
+{
+  "name": "shop-text-example",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "concurrently npm:backend npm:dev",
+    "backend": "nodemon backend/index",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "jest -env=jsdom"
+  },
+  "dependencies": {
+    "concurrently": "^6.3.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.5",
+    "nodemon": "^2.0.13",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@testing-library/dom": "^8.6.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.1",
+    "@testing-library/user-event": "^13.2.1",
+    "@vitejs/plugin-react": "^1.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.2.2",
+    "babel-preset-react-app": "^10.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.2.2",
+    "jest-circus": "^27.2.2",
+    "jest-scss-transform": "^1.0.1",
+    "jest-watch-typeahead": "^0.6.4",
+    "vite": "^2.6.0"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest/jest.setup.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.scss$": "jest-scss-transform",
+      "^.+\\.css$": "<rootDir>/jest/mocks/cssMock.js",
+      "^.+\\.svg$": "<rootDir>/jest/mocks/imageMock.js",
+      "^.+\\.jpg$": "<rootDir>/jest/mocks/imageMock.js",
+      "^.+\\.jpeg$": "<rootDir>/jest/mocks/imageMock.js",
+      "^.+\\.gif$": "<rootDir>/jest/mocks/imageMock.js",
+      "^.+\\.png": "<rootDir>/jest/mocks/imageMock.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    },
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ],
+    "resetMocks": true
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "react-app"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+  font-size: 16px;
+}
+
+nav {
+  background-color: rgb(143, 211, 140);
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+nav a.active {
+  font-weight: bold;
+}
+
+.products {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.products h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.products h3 {
+  font-size: 20px;
+}
+
+.product {
+  line-height: 150%;
+  padding: 20px;  
+}
+
+.product > * {
+  margin-top: 10px;
+}
+
+.product > img {
+  float: right;
+  width: 100px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.product input {
+  width: 50px;
+  padding: 5px 10px;
+  text-align: center;
+  padding-left: 30px;
+}
+
+.product button {
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.cart {
+  min-width: 300px;
+  background-color: #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  position: fixed;
+  top: 50px;
+  right: 20px;
+}
+
+.productInCart {
+  margin-bottom: 10px;
+}
+
+.productInCart .name {
+  width: 150px;
+  display: inline-block;
+}
+
+.productInCart .quantity {
+  width: 50px;
+  text-align: right;
+  display: inline-block;
+}
+
+.productInCart .rowSum {
+  width: 100px;
+  text-align: right;
+  display: inline-block;
+}
+
+.cart button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  margin-top: 10px;
+}
