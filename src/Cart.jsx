@@ -39,7 +39,7 @@ export default function Cart() {
       <span className="sum name"><b>SUM</b></span>
       <span className="quantity"></span>
       <span className="rowSum"><b>{sum}</b></span>
-      <button onClick={empty}>Empty cart</button>
+      <button onClick={empty} id="empty-cart-btn">Empty cart</button>
     </div>}
   </div>
 }

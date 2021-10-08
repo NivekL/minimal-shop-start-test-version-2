@@ -21,7 +21,7 @@ export default function ProductList({ categoryToDisplay }) {
         <p>{description[0].toUpperCase() + description.slice(1) + '.'}</p>
         <p className="price"><b>Price: {g.curr(price)}</b></p>
         <p>
-          <button className="less" onClick={() => less(id)}>-</button>
+          <button id="less" className="less" onClick={() => less(id)}>-</button>
           <input type="number" {...g.bind('quantity' + id)} />
           <button className="more" onClick={() => more(id)}>+</button>
         </p>

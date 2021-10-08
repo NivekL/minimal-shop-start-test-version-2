@@ -9,6 +9,8 @@ import {
 import ProductList from './ProductList.jsx';
 import Cart from './Cart.jsx';
 
+
+
 // Create a context and wrap App in it
 export default withContext(
   'global',
